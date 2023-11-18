@@ -35,7 +35,7 @@ class AdServices {
     const tags = await datasource.getRepository(TagEntity).find({ where: { id: In(tagId) } });
     
     
-    console.log('Tags:', tags); // Affichage des tags récupérés pour le débogage
+    // console.log('Tags:', tags); // Affichage des tags récupérés pour le débogage
   
     if (!tags || tags.length !== tagId.length) {
       throw new Error("Certains tags n'ont pas été trouvés ou les identifiants des tags sont incorrects");
